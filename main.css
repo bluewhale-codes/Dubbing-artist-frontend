@@ -1,0 +1,1389 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    
+}
+
+:root{
+    --mainblue:#1369ce;
+    --mainhoverblue:#08458b;
+   
+}
+
+/* css for new nav bar :-start */
+
+.nav-bar a ,.heading,.dropdown {
+    color: rgb(97, 97, 97);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-bar a:hover {
+    color:var(--mainhoverblue)
+}
+.outer-nav-bar{
+    flex-direction: column;
+   display: flex;
+}
+
+.nav-bar{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.181) ;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    display: flex;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+.left-nav , .right-nav{
+    display: flex;
+}
+.mobile-left-nav{
+    display:none;
+}
+.nav-link{
+    align-items: center;
+    display: flex;
+    height: 40px;
+}
+.nav-link:not(:first-child){
+    margin-left: 30px;
+}
+
+
+.img-button{
+    border: 2px solid var(--mainblue);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 40px;
+   
+    
+}
+.heading{
+    color: white;
+    background-color:var(--mainblue);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.dropdown{
+    background-color: rgb(41, 41, 41);
+    color: rgb(232, 232, 232);
+    transition: all 0.3s;
+    border-radius: 10px;
+    visibility:hidden;
+    position:absolute;
+    padding: 10px;
+    margin: 20px;
+    opacity: 0; 
+    right: 0;
+    top: 0;
+}
+.dropdown ul{
+    padding-left: 0px !important;
+    list-style-type:none;
+}
+.dropdown ul li:hover{
+   color: var(--mainhoverblue);
+   cursor: pointer;
+}
+.visible{
+    transform: translateY(40px);
+    visibility: visible;
+    opacity: 1;
+}
+.overlay{
+    display:none;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    
+    .left-nav{
+        display:none;
+    }
+    .mobile-left-nav{
+        justify-content: center;
+        align-items: center;
+        display:flex;
+    }
+
+    .overlay{
+        background-color: rgb(243, 243, 243);
+        position:absolute;
+        height: 100vh;
+        z-index: 1000;
+        width: 100vw;
+        top: 0;
+    }
+    .show-nav{
+       display: inline-block;
+    }
+    .overlay > div{
+       padding: 10px 20px 10px 20px;
+    }
+    .overlay > div a{
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 15px;
+        color: black;
+    }
+    .overlay .overlay-header p{
+        color: rgb(36, 36, 36);
+        font-weight:bolder;
+        font-size: 18px;
+    
+    }
+    .overlay .overlay-header{
+        border-bottom: 1px solid rgb(0, 30, 128);
+        justify-content: space-between;
+        display: flex;
+    }
+   
+}
+
+@media only screen and (max-width:330px){
+
+    .heading{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+/* css for new nav bar :-end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* profile css :start */
+
+
+#account--nav-bar , #header--profileEditForm{
+    background-color: rgb(31, 31, 47);
+    display: flex;
+}
+#account--nav-bar .nav-item{
+    padding: 10px 20px;
+}
+#account--nav-bar .nav-item p{
+    color: rgb(244, 244, 244);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight:500;
+    cursor: pointer;
+}
+.active{
+    border-bottom: 4px solid rgb(54, 98, 229);
+}
+.main{
+    padding: 20px;
+    margin: auto;
+    width: 76%;
+}
+img{
+    object-fit: cover;
+}
+.profile-section {
+    box-shadow: 2px 2px 10px rgb(193, 193, 193);
+    border: 1.4px solid rgb(210, 210, 210);
+
+    background-color: rgb(249, 247, 247);
+    flex-direction:column;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    height:500px;
+    width: 100%;
+}
+.profile-section .profile-img{
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height:40%;
+    
+}
+.profile-img-button{
+    text-align: end;
+    padding: 20px;
+   
+}
+
+
+.profile-background{
+    background-image: url(images/groupmen1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.profile-section .profile-details{
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    
+}
+.profile-img-box{
+    border: 4px solid white;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 3%;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    top: 40%;
+    cursor:pointer;
+}
+.profile-details .profile-edit-button{
+    text-align: end;
+}
+.profile-edit-button button , .profile-img-button button{
+    background-color: var(--mainblue);
+    transition: all .2s;
+    border-radius: 5px;
+    padding: 8px 20px;
+    border: none;
+}
+.profile-edit-button button:hover{
+    background-color: var(--mainhoverblue);
+    cursor: pointer;
+}
+.profile-edit-button button a , .profile-img-button button a ,.card-sectionB button a{
+    text-decoration: none;
+    color: white;
+}
+.profile-details .details ul{
+    list-style-type: none;
+    padding-left: 0px !important;
+   
+}
+
+.add-buttons{
+    padding-top: 10px;
+}
+.add-buttons button{
+  background-color: var(--mainblue);
+  transition: all 0.2s;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border:none;
+}
+.add-buttons button:hover{
+  background-color:var(--mainhoverblue);
+  cursor: pointer;
+}
+.add-buttons button a{
+   color: rgb(228, 228, 228);
+   text-decoration: none;
+   font-size: 15px;
+   font-weight:600;
+}
+
+.profile-details .details ul li:nth-child(1){
+    color: rgb(62, 62, 62);
+    font-weight: 500;
+    font-size: 30px;
+}
+.profile-details .details ul li:nth-child(2){
+    color: var(--mainblue);
+    font-weight: 500;
+    font-size: 15px;
+}
+.profile-details .details ul li:nth-child(3){
+    color: rgb(62, 62, 62);
+    padding:10px 0px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.profile-details .details ul li:nth-child(4){
+    color: rgb(62, 62, 62);
+    font-weight: 500;
+    font-size: 18px;
+}
+.profile-details .details ul li:nth-child(5){
+    color: rgb(62, 62, 62);
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 500;
+  
+}
+.review-section{
+    box-shadow: 2px 2px 10px rgb(193, 193, 193);
+    border: 1px solid rgb(219, 219, 219);
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    overflow: hidden;
+    height: 400px;
+    overflow: scroll;
+    width: 100%;
+    border-radius: 7px;
+}
+.review-header,.portfolio-header{
+    border-bottom: 1.3px  solid rgb(213, 213, 213);
+    position:sticky;
+    top: 0;
+}
+.review-header p, .portfolio-header p{
+   font-size: 21px;
+   font-weight: bold;
+   color: rgb(39, 38, 38);
+}
+.total-reviews{
+    padding: 20px;
+}
+/* .my-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.total-reviews .review ul{
+    width: 100%;
+    list-style-type: none;
+    padding: 0px;
+}
+.total-reviews .review {
+    padding-bottom: 20px;
+    border-bottom: 1.4px solid rgb(222, 222, 222);
+}
+.total-reviews .review ul li{
+    padding-bottom: 10px;
+}
+.total-reviews .review ul li:nth-child(1){
+    color: var(--mainblue);
+}
+.total-reviews .review ul li:nth-child(2){
+    text-align: end;
+}
+.total-reviews .review ul li:nth-child(3) p{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+}
+.total-reviews .review ul li:nth-child(4) p{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.total-reviews .review ul li:nth-child(5) p{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--mainblue);
+}
+.total-reviews .review ul li:nth-child(6){
+   display: flex;
+   justify-content:space-between;
+  align-items: center;
+}
+
+.portfolio-section{
+    position: relative;
+    width: 100%;
+    height:400px;
+    display: grid;
+    grid-template-rows:15% 85%;
+    box-shadow: 2px 2px 10px rgb(193, 193, 193);
+    border: 1px solid rgb(219, 219, 219);
+    margin-top: 30px;
+    border-radius: 7px;
+}
+.portfolio-header,.review-header{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-header button{
+    background-color:var(--mainblue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.portfolio-header button a{
+   text-decoration: none;
+   font-size: 14px;
+   font-weight:bold;
+   color: white;
+
+}
+.portfolio-section .portfolio-items{
+  position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center; */
+    
+}
+.portfolio-section .portfolio-items >div{
+   margin-bottom: 10px; 
+}
+
+
+@media only screen and (max-width: 600px){
+
+
+    .main{
+        width: 97%;
+         padding: 10px;
+    }
+    .profile-section{
+        height:400px;
+    }
+
+    .profile-img-box{
+        width: 100px;
+        height: 100px;
+     }
+     .profile-section .profile-img{
+        height:30%;
+        
+    }
+     .profile-section .profile-details{
+         padding: 10px;
+        height: 70%;
+        
+    }
+    .add-buttons button{
+        padding: 5px 10px;
+      }
+      .add-buttons button a{
+        font-size: 12px;
+     }
+     
+    .profile-details .details ul li:nth-child(1){
+        font-size: 24px;
+    }
+    .profile-details .details ul li:nth-child(2){
+        font-size: 13px;
+    }
+    .profile-details .details ul li:nth-child(3){
+        font-size: 13px;
+    }
+    .profile-details .details ul li:nth-child(4){
+        font-size: 15px;
+    }
+    .profile-details .details ul li:nth-child(5){
+        font-size: 14px;
+    
+    }
+    .profile-edit-button button , .profile-img-button button{
+        background-color: var(--mainblue);
+        transition: all .2s;
+        border-radius: 5px;
+        padding: 4px 10px;
+        border: none;
+    }
+    .total-reviews .review ul li:nth-child(3) p{
+        font-size: 14px;
+    }
+    .total-reviews .review ul li:nth-child(4) p{
+        font-size: 13px;
+    }
+    .total-reviews .review ul li:nth-child(5) p{
+        font-size: 14px;
+    }
+    .total-reviews .review ul li:nth-child(6){
+       flex-direction: column;
+       align-items: start;
+    }
+    .total-reviews .review {
+        padding-bottom: 10px;
+        border-bottom: 1.4px solid rgb(222, 222, 222);
+    }
+    .total-reviews .review ul li{
+        padding-bottom: 5px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 320px){
+    #account--nav-bar .nav-item p{
+        font-size: 12px;
+    }
+    #account--nav-bar .nav-item{
+        padding: 10px 15px;
+    }
+}
+
+
+/* prfoile :end */
+
+/* ################################# */
+
+/* Myproject :start */
+
+#Edit-projects-container{
+    box-shadow:0px 2px 10px rgb(189, 188, 188);
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 400px;
+    margin-top: 50px !important;
+    display: flex;
+    margin: auto;
+    width: 70%;
+}
+
+#Edit-projects-container ul{
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+
+#Edit-projects-container ul li:nth-child(1){
+    font-weight: 500;
+}
+#Edit-projects-container ul li:nth-child(2){
+    padding: 10px 0px 40px 0px;
+    color: rgb(56, 56, 56);
+    font-size: 14.5px;
+    font-weight: 500;
+}
+#Edit-projects-container ul li:nth-child(3) button{
+    background-color: var(--mainblue);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+#bid-insights{
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+#bid-insights table{
+    border-collapse: collapse;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    
+}
+#bid-insights table th{
+    border-bottom: 1.4px solid rgb(183, 183, 183);
+    color:rgb(88, 87, 87);
+    text-align: start;
+    font-size: 17px;
+    padding: 10px;
+    
+}
+#bid-insights table td:nth-child(1){
+    color: var(--mainblue);
+    
+}
+#bid-insights table td{
+    padding: 15px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(35, 35, 35);
+}
+
+.bids-table{
+    box-shadow: 0px 2px 10px rgb(204, 203, 203);
+    border-radius: 3px;
+}
+
+.page{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+/* ########## update profile card :start */
+
+svg{
+    cursor: pointer;
+}
+.profile-img--PUC .image {
+    height: 200px;
+    width: 200px;
+  }
+  img {
+    object-fit: cover;
+  }
+  .profile-img--PUC {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+  }
+  .Edit-profile-image {
+    transition: all .4s;
+    box-shadow: 0 0 12px #00000049, 0 8px 24px rgba(0, 0, 0, 0.295);
+    background-color: rgb(255, 255, 255);
+    border: 1.4px solid white;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 100;
+    /* display:none; */
+    width: 250px;
+    left:190px;
+    transform: scale(0);
+    opacity: 0;
+    visibility: 0;
+    height:auto;
+    top: 50px;
+    transition: all 0.2s;
+  }
+  .show-card{
+    opacity: 1;
+    visibility: 1;
+    transform: scale(1);
+  }
+
+  #profile-update--card::after{
+    border-color:transparent rgb(255, 255, 255) transparent transparent;
+    border-style: solid;
+    position:absolute;
+    border-width: 10px;
+    right: 248px;
+    content: "";
+    top: 100px;
+  }
+  #profile-update--card .header-icon--PUC {
+      align-items: center;
+      justify-content: end;
+    display: flex;
+  }
+  .header--PUC p {
+    padding: 5px 0px;
+  }
+  .header--PUC p:nth-child(1) {
+      font-weight: 500;
+    font-size: 20px;
+  }
+  .header--PUC p:nth-child(2) {
+      color: rgb(110, 110, 110);
+      font-weight: 500;
+    font-size: 13px;
+  }
+  .img-footer--PUC button {
+      border: none;
+      background-color:var(--mainblue);
+      color: white;
+      padding: 7px 0px;
+      margin-top: 10px;
+      font-weight: bolder;
+      font-size: 17px;
+      cursor: pointer;
+      width: 100%;
+      border: 1.4px solid rgb(174, 174, 174);
+      border-radius: 15px;
+  }
+  .img-footer--PUC button:hover {
+    background-color: var(--mainhoverblue);
+  }
+  #profile-update--card .img-footer--PUC {
+    margin-top: 10px;
+  }
+  .img-footer--PUC input[type="file"] {
+    display: none;
+  }
+  .img-footer--PUC label {
+      color: rgb(7, 41, 143);
+      font-weight: 500;
+      font-size: 15px;
+      cursor: pointer;
+  }
+  .img-footer--PUC label:hover {
+    border-bottom: 1.5px solid rgb(17, 55, 169);
+    color: rgb(19, 58, 174);
+  }
+
+
+/*######### update profile card :end */
+
+
+
+@media only screen and (max-width: 600px){
+    #Edit-projects-container{
+        width: 100%;
+        align-items:flex-start;
+        box-shadow: none;
+    }
+
+    #Edit-projects-container ul li:nth-child(2){
+        padding: 10px 0px 20px 0px;
+        font-size: 15px;
+    }
+    #Edit-projects-container ul li:nth-child(3) button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    #bid-insights{
+        margin-top: 20px;
+        padding: 15px;
+    }
+    #bid-insights table{
+        background-color: white;
+        border-collapse: collapse;
+        
+    }
+    #bid-insights table th{
+        font-size: 15px;
+        text-align: start;
+        border-bottom: 1.4px solid rgb(183, 183, 183);
+        color:rgb(88, 87, 87);
+        padding: 10px;
+        
+    }
+    #bid-insights table td:nth-child(1){
+        color: royalblue;
+        
+    }
+    #bid-insights table td{
+        padding: 15px 10px;
+        font-size: 15px;
+        
+    }
+
+    #profile-update--card {
+        height: 100vh;
+        width: 93vw;
+        left: 0px;
+        top: 0px;
+    }
+    #profile-update--card::after{
+        border-color:transparent transparent transparent transparent;
+      }
+}
+
+
+/* Myproject :end */
+
+/* ################################## */
+
+/* Edit profile form :css start */
+#header--profileEditForm{
+    position:sticky;
+    top: 0;
+    margin-bottom:50px;
+}
+#header--profileEditForm > div p{
+     font-weight:500;
+     font-size:15px;
+     color: rgb(245, 244, 244);
+}
+#header--profileEditForm > div{
+   padding: 10px;
+   cursor: pointer;
+}
+#header--profileEditForm > div:nth-child(1){
+   border-bottom: 5px solid var(--mainblue);
+}
+
+
+.container--EditProfile{
+    width: 100%;
+    height: 100%;
+}
+#EPF .form-container--EPF{
+   width: 50%;
+   height: auto;
+   background-color: rgb(237, 233, 233);
+   margin: auto;
+   padding: 20px;
+   box-shadow: 0px 2px 5px rgb(208, 208, 208);
+}
+
+.form-container--EPF form input , .form-container--EPF form textarea{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border:none;
+    color:rgb(63, 63, 63);
+    border: 1.4px solid rgb(195, 195, 195);
+    box-shadow: 0px 1px 5px rgb(184, 183, 183);
+    
+}
+.form-container--EPF form input:hover ,.form-container--EPF form textarea:hover{
+    border:  1.2px solid rgb(3, 81, 183);
+    
+}
+.form-container--EPF form input:focus-visible{
+    outline: 1.6px solid rgb(3, 81, 183);
+    
+}
+.form-container--EPF form textarea:focus-visible{
+    outline: 1.6px solid rgb(3, 81, 183);
+    
+}
+.row-inputs--EPF > div{
+    width: 100%;
+}
+.row-inputs--EPF{
+    display: flex;
+}
+.image-input-wrapper--EPF{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#myForm--EPF .label{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 0px;
+}
+.output-input-wrapper--EPF div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+.output-input-wrapper--EPF div p{
+    padding: 0px 10px;
+    color: rgb(35, 14, 168);
+    font-weight: 500;
+    font-size: 15px;
+}
+.form-container--EPF  div{
+    margin-bottom: 15px;
+}
+.row-inputs--EPF div:nth-child(2){
+    padding-inline-start: 10px;
+}
+
+.submit-button--EPF button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    background-color: rgb(9, 74, 178);
+    font-weight: 500;
+    font-size: 17px;
+}
+.submit-button--EPF button:hover{
+    background-color: rgb(7, 51, 122);
+    cursor: pointer;
+}
+
+@media only screen and (max-width:850px){
+    #EPF .form-container--EPF{
+        width: 70%;
+        height: auto;
+        background-color: rgb(237, 233, 233);
+        margin: auto;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgb(208, 208, 208);
+     }
+}
+
+@media only screen and (max-width:600px){
+    #EPF .form-container--EPF{
+        width: 90%;
+        height: auto;
+        background-color: rgb(237, 233, 233);
+        margin: auto;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgb(208, 208, 208);
+     }
+}
+
+/* Edit profile form :css end */
+
+
+
+
+
+
+
+
+/* ########  Profiles page css :start */
+
+
+#userProfiles-box{
+    width: 95%;
+    /* background-color: rgb(239, 25, 25); */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding:50px 0px;
+    justify-content:center;
+}
+
+.userProfile-card{
+    height: 210px;
+    width: 300px;
+    display: grid;
+    grid-template-rows:60% 20% 20%;
+    border-radius: 5px;
+    border: 1.4px solid rgb(241, 241, 241);
+    overflow:hidden;
+    margin: 8px;
+    transition: all .2s;
+    cursor: pointer;
+}
+.userProfile-card:hover{
+    transform: scale(1.05);
+}
+
+.userProfile-card .image-container{
+    overflow: hidden;
+}
+.userProfile-card .header,.userProfile-card .footer{
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content:space-between;
+}
+.userProfile-card .header p{
+    font-size: 17px;
+    font-weight:500;
+}
+.userProfile-card .footer p{
+    font-size: 13.5px;
+    font-weight:500;
+}
+.userProfile-card .footer p{
+    font-size: 13.5px;
+    font-weight:500;
+}
+.userProfile-card .footer .rght-side p{
+  color: var(--mainblue);
+  padding-inline-start: 7px;
+}
+.userProfile-card .footer .rght-side{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (max-width:1120px){
+    #userProfiles-box{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding:50px 0px;
+        justify-content:center;
+    }
+}
+@media only screen and (max-width:650px){
+    #userProfiles-box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .userProfile-card{
+        width: 370px;
+    }
+}
+@media only screen and (max-width:400px){
+    #userProfiles-box{
+        width: 100%;
+    }
+    
+    .userProfile-card{
+        width:95%;
+    }
+    .userProfile-card .header p{
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+/* ######## Profiles page css :end */
+
+.hello{
+    margin: auto;
+    display: flex;
+    width: 70%;
+    height: 100%;
+    /* flex-wrap: wrap; */
+    padding: 10px;
+}
+
+
+/* ########### Manage skills page :start */
+
+
+#manage-skills{
+    display: grid;
+    grid-template-rows:20% 80%;
+    width: 70%;
+    height:300px;
+   color: rgb(246, 246, 246);
+    margin: auto;
+}
+
+#manage-skills .header{
+    /* background-color:yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#manage-skills .footer{
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#manage-skills .footer > div{
+    margin: 10px;
+}
+
+#manage-skills .footer-form-part{
+    padding: 30px 40px;
+    background-color: green;
+}
+#manage-skills .footer .upload-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed rgb(184, 184, 184);
+    height:130px;
+    width:180px;
+    background-color: rgb(238, 238, 238);
+}
+#manage-skills .footer .portfolio-item--edit{
+    border: 1.4px solid rgb(171, 171, 171);
+    border-radius: 5px;
+    overflow:visible;
+    position: relative;
+    height:130px;
+    width:180px;
+    background-color: rgb(238, 238, 238);
+}
+#manage-skills .footer div button{
+    border:none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.457);
+}
+#manage-skills .footer div button a{
+   text-decoration:none;
+   color: white;
+}
+#manage-skills .footer label{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 5px;
+    color: rgb(241, 241, 241);
+    background-color: rgba(0, 0, 0, 0.316);
+}
+#manage-skills .header .left-btn button{
+   font-size: 15px;
+   font-weight: bolder;
+   background-color: var(--mainblue);
+   padding: 10px 20px;
+   border: none;
+   color: white;
+}
+#manage-skills .header .right-btn button{
+   border: 1px solid rgb(85, 83, 83);
+   padding: 10px 20px;
+
+}
+#manage-skills .header .right-btn button a{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+
+}
+
+.portfolio-item--edit .footer-txt{
+    background-color: rgba(255, 255, 255, 0.48);
+    position: relative;
+    top: -43px;
+    padding:10px
+}
+.portfolio-item--edit .footer-txt p{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(28, 27, 27);
+}
+
+@media only screen and (max-width:600px){
+    #manage-skills .header{
+        display: flex;
+        flex-direction: column;
+    }
+    #manage-skills .header .right-btn button{
+        display: none;
+     }
+     #manage-skills .footer{
+        justify-content: center;
+    }
+    #manage-skills .footer .portfolio-item--edit{
+        height:200px;
+        width:100%;
+    }
+      
+}
+
+/* ########### Manage skills page :end */
+
+.container-portfolio-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+.container-portfolio-items .portfolio-item{
+    position: relative;
+     width: 200px;
+     overflow: hidden;
+     height:150px;
+     /* border: 2px solid black; */
+}
+.portfolio-item .Footer{
+    position:absolute;
+    padding:10px 0px;
+    background-color: var(--mainhoverblue);
+    color: white;
+    width: 200px;
+    top:150px;
+    transition: all 0.3s;
+}
+.portfolio-item .Footer p{
+   font-weight: 500;
+   font-size: 15px;
+   text-align: center;
+}
+
+.portfolio-item:hover .image img{
+        transform: scale(1.2);
+}
+.portfolio-item:hover .Footer{
+        top: 110px;
+}
+.portfolio-item .image{
+        width:200px;
+        height:150px;
+}
+.portfolio-item .image img{
+        transition: all 0.3s;
+}
+
+.portfolio-detail-card{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    left: -0px;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#00000082;
+    z-index:100000;
+}
+.show-portfolio-detail-card{
+    visibility:visible;
+}
+
+.portfolio-detail-card .inner-detail-card{
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 900px;
+    height:450px;
+    /* background-color:white; */
+}
+.inner-detail-card .left-side{
+      border-right: 1.5px solid rgb(208, 205, 205);
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      display: grid;
+      grid-template-rows: 15% 85%;
+      padding: 20px;
+}
+.inner-detail-card .left-side .header{
+      display: flex;
+}
+.inner-detail-card .left-side .header p{
+      font-size: 22px;
+      font-weight: bold;
+}
+.inner-detail-card .right-side{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+.inner-detail-card .right-side .header{
+      display: flex;
+}
+.inner-detail-card .right-side .header p{
+      padding-inline-start:10px;
+      font-weight: 500;
+      font-size: 16px;
+}
+.inner-detail-card .right-side .header .image{
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+      overflow: hidden;
+}
+.inner-detail-card .right-side .description ul li{
+      padding-bottom: 10px;
+}
+.inner-detail-card .right-side .description ul{ 
+      list-style-type: none;
+      padding: 0;
+}
+.inner-detail-card .right-side .description ul li:nth-child(1){ 
+      color: rgb(246, 220, 21);
+      font-size: 20px;
+}
+.inner-detail-card .right-side .description ul li:nth-child(2) p{ 
+      font-size:17px;
+      font-weight: 500;
+}
+.inner-detail-card .right-side .description ul li:nth-child(3) p{ 
+      font-size:14.3px;
+      font-weight: 500;
+}
+.inner-detail-card .right-side .description ul li:nth-child(4) p{ 
+      font-size:15px;
+      color: rgb(32, 32, 32);
+}
+
+
+
+
+/* ############## css for upload portfolio form :-start */
+
+
+.FORM-PAGE .header-form-part p{
+    font-size: 30px;
+    font-weight:bolder;
+    color: rgb(60, 60, 60);
+    padding: 20px 0px;
+}
+
+.portfolio-edit-form--container{
+    padding: 15px 30px;
+    width: 100%;
+    height:500px;
+    background-color: rgb(239, 239, 239);
+}
+#portfolio-edit-form input,#portfolio-edit-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 13px;
+    color:rgb(27, 26, 26);
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#portfolio-edit-form .header p{
+    font-size: 17px;
+    font-weight: 500;
+}
+#portfolio-edit-form > div label{
+    font-size: 14px;
+    font-weight: 500;
+}
+#portfolio-edit-form > div {
+    margin: 10px 0px;
+}
+#upload-button{
+    text-align: center;
+    padding: 10px 0px;
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 4px;
+    border: 1.4px solid rgb(192, 191, 191);
+}
+
+.abbr-txt{
+    margin-bottom:10px;
+}
+
+.abbr-txt p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.FORM-PAGE{
+    width:70%;
+    margin: auto;
+}
+@media only screen and (max-width:600px){
+    .FORM-PAGE{
+        width:100%;
+        margin: auto;
+    }
+}
+
+
+/* ############## css for upload portfolio form :-end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main{
+   position:absolute;
+   top: -20px;
+   right: 0;
+}
+#main a{
+    text-decoration: none;
+   font-size: 12px;
+   font-weight: 500;
+   color: rgb(108, 108, 108);
+}

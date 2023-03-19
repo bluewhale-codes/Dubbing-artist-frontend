@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+    <!-- NAV BAR :-start -->
+    <div class="nav-bar">
+        <div class="left-nav">
+             <div class="nav-link"><span class="heading">Dubbing Artist</span></div>
+              <div class="nav-link"><a href="main.html">Home</a></div>
+              <div class="nav-link"><a href="profile-section.html">Profiles</a></div>
+              <div class="nav-link"><a href="#">Projects</a></div>
+              <div class="nav-link"><a href="#">Post Project</a></div>
+        </div>
+        <div class="mobile-left-nav">
+            <div class="nav-link">
+                <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="20" height="20">
+                        <g>
+                            <path d="M480,224H32c-17.673,0-32,14.327-32,32s14.327,32,32,32h448c17.673,0,32-14.327,32-32S497.673,224,480,224z" />
+                            <path d="M32,138.667h448c17.673,0,32-14.327,32-32s-14.327-32-32-32H32c-17.673,0-32,14.327-32,32S14.327,138.667,32,138.667z"/>
+                            <path d="M480,373.333H32c-17.673,0-32,14.327-32,32s14.327,32,32,32h448c17.673,0,32-14.327,32-32S497.673,373.333,480,373.333z"/>
+                        </g>
+
+                </svg>
+                <span style="margin: 0px 10px;" class="heading">Dubbing Artist</span>
+            </div>
+
+        </div>
+        <div class="right-nav">
+            <div class="nav-link"><a href="{% url 'log-in' %}">Login</a></div>
+            <div  class="nav-link img-button">
+                <a href="#">
+                      <img src="images/IMG_20210609_222409_410.jpg"  alt="">
+                </a>
+                <div  class="dropdown">
+                   <ul>
+                     <li><a href="{% url 'log-out' %}">Logout</a></li>
+                     <li>Account</li>
+                     <li>setting</li>
+                   </ul>
+             </div>
+           </div>
+        </div>
+   </div>
+   <div class="overlay">
+        <div class="overlay-header ">
+            <p>Navigation</p>
+            <p>
+                <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.021 512.021" style="enable-background:new 0 0 512.021 512.021;" xml:space="preserve" width="20" height="20">
+                    <g>
+                        <path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
+                    </g>
+                </svg>
+            </p>
+        </div>
+        <div class="overlay-nav-link"><a href="#">Home</a></div>
+        <div class="overlay-nav-link"><a href="#">Profiles</a></div>
+        <div class="overlay-nav-link"><a href="#">Projects</a></div>
+        <div class="overlay-nav-link"><a href="#">Post Project</a></div>
+   </div>
+
+   <!-- NAV BAR :end -->
+
+
+   <!-- nav bar for page :start -->
+   <div id="header--profileEditForm">
+
+        <div>
+            <p>Go Back</p>
+        </div>
+        <div>
+            <p>Show Your Dubbing Voice</p>
+        </div>
+
+    </div>
+    <!-- nav bar for page :end -->
+
+
+   <!-- Manage skill section :start -->
+    <div id="manage-skills">
+            <!-- header with two button :start -->
+            <div class="header">
+                <div class="left-btn">
+                   <button>Add Portfolio Item</button>
+                </div>
+                <div class="right-btn">
+                     <button><a href="">Go back Your Profile Page</a></button>
+                </div>
+            </div>
+            <!-- header :end -->
+
+
+            <!-- footer for portfolio item :start -->
+            <div class="footer">
+                     
+                      <!-- portfolio item 1 -->
+                     <div class="portfolio-item--edit">
+                        <div id="main">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="12" height="12"><path d="M22.853,1.148a3.626,3.626,0,0,0-5.124,0L1.465,17.412A4.968,4.968,0,0,0,0,20.947V23a1,1,0,0,0,1,1H3.053a4.966,4.966,0,0,0,3.535-1.464L22.853,6.271A3.626,3.626,0,0,0,22.853,1.148ZM5.174,21.122A3.022,3.022,0,0,1,3.053,22H2V20.947a2.98,2.98,0,0,1,.879-2.121L15.222,6.483l2.3,2.3ZM21.438,4.857,18.932,7.364l-2.3-2.295,2.507-2.507a1.623,1.623,0,1,1,2.295,2.3Z"/>
+                            </svg>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </div>
+                          <img src="images/Passportwallpaper.jpg" alt="">
+                          <div class="footer-txt">
+                              <p>Hindi Dubbing</p>
+                          </div>
+                     </div>
+
+                     <!-- portfolio item 2 -->
+                     <div class="portfolio-item--edit">
+                        <div id="main">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="12" height="12"><path d="M22.853,1.148a3.626,3.626,0,0,0-5.124,0L1.465,17.412A4.968,4.968,0,0,0,0,20.947V23a1,1,0,0,0,1,1H3.053a4.966,4.966,0,0,0,3.535-1.464L22.853,6.271A3.626,3.626,0,0,0,22.853,1.148ZM5.174,21.122A3.022,3.022,0,0,1,3.053,22H2V20.947a2.98,2.98,0,0,1,.879-2.121L15.222,6.483l2.3,2.3ZM21.438,4.857,18.932,7.364l-2.3-2.295,2.507-2.507a1.623,1.623,0,1,1,2.295,2.3Z"/>
+                            </svg>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </div>
+                          <img src="images/img coco.jpg" alt="">
+                          <div class="footer-txt">
+                              <p>English Cartton Dubbing</p>
+                          </div>
+                     </div>
+
+
+                     <!-- portfolio item 3 -->
+                     <div class="portfolio-item--edit">
+                        <div id="main">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="12" height="12"><path d="M22.853,1.148a3.626,3.626,0,0,0-5.124,0L1.465,17.412A4.968,4.968,0,0,0,0,20.947V23a1,1,0,0,0,1,1H3.053a4.966,4.966,0,0,0,3.535-1.464L22.853,6.271A3.626,3.626,0,0,0,22.853,1.148ZM5.174,21.122A3.022,3.022,0,0,1,3.053,22H2V20.947a2.98,2.98,0,0,1,.879-2.121L15.222,6.483l2.3,2.3ZM21.438,4.857,18.932,7.364l-2.3-2.295,2.507-2.507a1.623,1.623,0,1,1,2.295,2.3Z"/>
+                            </svg>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
+                        </div>
+                          <img src="images/Cafe-Coffee-Day-Logo.png" alt="">
+                          <div class="footer-txt">
+                              <p>Punjabi Dubbing</p>
+                          </div>
+                     </div>
+
+                 <!-- Add more button :start -->
+                  <div class="upload-btn">
+                     <button><a href="upload-portfolio.html"> + Add Profile Item</a></button>
+                  </div>
+                  <!-- add more button end -->
+
+
+
+            </div>
+            <!-- Footer for portfolio items :end -->
+
+
+    </div>
+    <!-- Manage skill section :end  -->
+
+
+
+
+</body>
+</html>
